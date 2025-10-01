@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Users\User\Desktop\1111334037\37\37\Source.cpp(17,16): warning C4244: '正在初始化': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+  37.vcxproj -> C:\Users\User\Desktop\1111334037\37\Debug\37.exe
