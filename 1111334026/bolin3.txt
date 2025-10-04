@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main (void)
+{
+	int chinese, math, math1 ;
+	float avg = 0;
+	/*char rank = 'a';*/
+	printf("請輸入你的國文成績:\n");
+	scanf_s("%d", &chinese);
+	printf("請輸入你的數學成績:\n");
+	scanf_s("%d", &math);
+	printf("請輸入你的計概成績:\n");
+	scanf_s("%d", &math1);
+	printf("你的學期成績%d+%d+%d是:%d\n",chinese,math,math1,chinese+math+math1);
+	avg = (float)(chinese + math+math1) / 3;
+	printf("學期平均成績:%f\n", avg);
+	/*printf("學期等第:%c\n", rank);*/
+	if (avg >= 60)
+	{
+		printf("恭喜通過!");
+	}
+	else
+	{
+		printf("再加油!");
+	}
+}
