@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    double weight, height, bmi;
+
+    printf("請輸入體重(公斤) 與 身高(公尺)，以空白分隔，例如：70 1.75\n");
+    if (scanf_s(" %lf, %lf", &weight, &height) != 2) {
+        printf("輸入錯誤！\n");
+        return 1;
+    }
+
+    if (height <= 0) {
+        printf("身高必須大於 0！\n");
+        return 1;
+    }
+
+    bmi = weight / (height * height);
+    printf("你的 BMI = % .1f\n", bmi);
+
+    if (bmi < 18.5)
+        printf("等級：體重過輕\n");
+    else if (bmi < 25.0)
+        printf("等級：正常體重\n");
+    else if (bmi < 30.0)
+        printf("等級：過重\n");
+    else if (bmi < 35.0)
+        printf("等級：輕度肥胖\n");
+    else if (bmi < 40.0)
+        printf("等級：中度肥胖\n");
+    else
+        printf("等級：重度肥胖（病態肥胖）\n");
+    return 0;
+}
