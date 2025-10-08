@@ -2,13 +2,13 @@
 
 int main()
 {	
-	int weight, height, BMI;
+	float BMI, weight, height;
 	printf("請輸入你的體重(單位為公斤)\n");
-	scanf_s("%d", &weight);
+	scanf_s("%f", &weight);
 	printf("請輸入你的身高(單位為公尺)\n");
-	scanf_s("%d", &height);
-	BMI = weight / (height ^ 2);
-	printf("BMI為 %d\n", BMI);
+	scanf_s("%f", &height);
+	BMI = weight / (height * height);
+	printf("BMI為%f\n", BMI);
 	if (BMI < 18.5)
 		printf("BMI檢測結果為體重過輕");
 	else if (BMI < 24.9)
