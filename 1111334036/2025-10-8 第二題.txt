@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{	
+	int weight, height, BMI;
+	printf("請輸入你的體重(單位為公斤)\n");
+	scanf_s("%d", &weight);
+	printf("請輸入你的身高(單位為公尺)\n");
+	scanf_s("%d", &height);
+	BMI = weight / (height ^ 2);
+	printf("BMI為 %d\n", BMI);
+	if (BMI < 18.5)
+		printf("BMI檢測結果為體重過輕");
+	else if (BMI < 24.9)
+		printf("BMI檢測結果為體重正常");
+	else if (BMI < 29.9)
+		printf("BMI檢測結果為過重");
+	else if (BMI < 34.9)
+		printf("BMI檢測結果為輕度肥胖");
+	else if (BMI < 39.9)
+		printf("BMI檢測結果為中度肥胖");
+	else if (BMI > 40)
+		printf("BMI檢測結果為重度肥胖");
+	return 0;
+}
