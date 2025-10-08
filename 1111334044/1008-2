@@ -1,0 +1,32 @@
+//10/8題目2. 建立一個BMI計算器應用程式，讀取使用者的體重（公斤）和身高（公尺），然後計算並顯示使用者的身體質量指數（BMI）。此外，利用if, else if 指令顯示BMI的等級，if()裡面只能使用單一運算式或條件式
+#include <stdio.h>
+
+int main()
+{
+    float weight, height, bmi;
+
+    printf("請輸入體重(公斤): ");
+    scanf_s("%f", &weight);
+
+    printf("請輸入身高(公尺): ");
+    scanf_s("%f", &height);
+
+    bmi = weight / (height * height);
+
+    printf("您的BMI為: %f\n", bmi);
+
+    if (bmi < 18.5)
+        printf("體重過輕\n");
+    else if (bmi < 24)
+        printf("體重正常\n");
+    else if (bmi < 27)
+        printf("體重過重\n");
+    else if (bmi < 30)
+        printf("輕度肥胖\n");
+    else if (bmi < 35)
+        printf("中度肥胖\n");
+    else
+        printf("重度肥胖\n");
+
+    return 0;
+}
