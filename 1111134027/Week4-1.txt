@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int english, math, science;
+    float avg;
+    float total;
+
+    printf("請輸入英文,數學,科學成績\n");
+    scanf_s("%d%d%d", &english, &math, &science);
+
+    total = (float)(english + math + science);
+    printf("總成績: %f\n", total);
+
+    avg = total / 3;
+    printf("平均成績: %f\n", avg);
+
+    if (avg >= 60) {
+        printf("恭喜通過!\n");
+        printf("享受pass的感覺!\n");
+    }
+    else if (avg < 0) {
+        printf("成績輸入錯誤!\n");
+        printf("請多加注意!\n");
+    }
+    else {
+        printf("再加油!\n");
+        printf("重修吧!\n");
+    }
+
+    printf("執行完畢!\n");
+
+    return 0;
+}
