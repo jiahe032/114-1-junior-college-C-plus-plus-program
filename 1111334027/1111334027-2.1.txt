@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main(void)
+{
+        int first, sceond, third;
+        int max, min;
+        float avg;
+        printf("請輸入第一整數：");
+        scanf_s("%d",&first);
+        printf("請輸入第二整數：");
+        scanf_s("%d", &sceond);
+        printf("請輸入第三整數:");
+        scanf_s("%d", &third);
+        int sum = first + sceond + third;
+        avg =(float) sum / 3;
+        max = first;
+        if (sceond > max)
+            max = sceond;
+        if (third > max)
+            max = third;
+        min = first;
+        if (sceond < min)
+            min = sceond;
+        if (third < min)
+            min = third;
+        printf("\n三個整數的和是：%d", sum);
+        printf("\n平均值是：%f", avg);
+        printf("\n最大值是：%d", max);
+        printf("\n最小值是：%d\n", min);
+        return 0;
+    }

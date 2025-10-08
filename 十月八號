@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int a, b, c;       // 三個整數
+    int sum;           // 總和
+    double avg;        // 平均
+    int max, min;      // 最大值與最小值
+
+    printf("請輸入三個整數:\n");
+    scanf_s("%d", &a);
+    scanf_s("%d", &b);
+    scanf_s("%d", &c);
+
+    // 計算和與平均
+    sum = a + b + c;
+    avg = sum / 3.0;
+
+    // 先假設最大最小都是 a
+    max = 0;
+    min = 99999;
+
+    // 找最大值（每次比較一個）
+    if (b > max)
+        max = b;
+    if (c > max)
+        max = c;
+
+    // 找最小值（每次比較一個）
+    if (b < min)
+        min = b;
+    if (c < min)
+        min = c;
+
+    // 輸出結果
+    printf("三個整數的和為: %d\n", sum);
+    printf("平均值為: %.2f\n", avg);
+    printf("最大值為: %d\n", max);
+    printf("最小值為: %d\n", min);
+
+    return 0;
+}

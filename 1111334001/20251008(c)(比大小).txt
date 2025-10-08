@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int a,b,c,h,M,m;      /*h=和，s=平均，M=最大，m=最小*/
+    double s;
+    
+    printf("請輸入第一個數字:");
+    scanf_s("%d",&a);
+    printf("請輸入第二個數字:");
+    scanf_s("%d",&b);
+    printf("請輸入第三個數字:");
+    scanf_s("%d",&c);
+    h=(a+b+c);
+    s=(h/3);
+    printf("你所輸入得數字和是:%d\n",h);
+    printf("你所輸入得數字平均是:%lf\n",s);
+    if(a<b){
+        if(a<c)
+          m=a;
+        else
+          m=c;
+    } else{
+        if(b<c)
+          m=b;
+        else
+          m=c;
+    }
+    
+    if(a>b){
+        if(a>c)
+          M=a;
+        else
+          M=c;
+    } else{
+        if(b>c)
+          M=b;
+        else
+          M=c;
+    }
+    
+    printf("你所輸入得數字最大值是:%d\n",M);
+    printf("你所輸入得數字最小值是:%d\n",m);
+
+    return 0;
+}
