@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(void)
+{
+	int 中文 = 0, 英文 = 0, 計概 = 0;
+	float 平均;
+	printf("請輸入你中文成績:");
+	scanf_s("%d", &中文);
+	printf("請輸入你英文成績:");
+	scanf_s("%d", &英文);
+	printf("請輸入你計概成績:");
+	scanf_s("%d", &計概);
+	printf("你的學習總成績%d+%d+%d是:%d\n", 中文, 英文, 計概, 中文 + 英文 + 計概);
+	平均 = (float)(中文 + 英文 + 計概) / 3;
+	printf("學習平均成績:%f\n", 平均);
+	if (平均 >= 60)
+		printf("及格了!!!");
+	else
+		printf("不及格!!!");
+	return 0;
+}

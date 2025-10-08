@@ -1,0 +1,28 @@
+透過鍵盤輸入國文、英文、計概成績，並分別印出整數的總成績與浮點數或double型態的平均成績。
+再判斷平均成績大於等於60分者，多印出訊息"恭喜通過!"，否則印出"再加油!"
+
+#include <stdio.h>
+
+int main(void)
+{
+	int chinese = 98, english = 99, caculate = 99, total = 0;
+	float avg = 0;
+	printf("請輸入你的國文成績:");
+	scanf_s("%d", &chinese);
+	printf("請輸入你的英文成績:");
+	scanf_s("%d", &english);
+	printf("請輸入你的計蓋成績:");
+	scanf_s("%d", &caculate);
+	total = chinese + english + caculate;
+		printf("你的學期總成績是:%d\n", total);
+	avg = (double)total/ 3;
+	printf("學期平均成績:%f\n", avg);
+	if (avg < 60) { 
+		printf("再加油!");
+	}
+	else if(avg>=60) {
+		printf("恭喜通過!");
+	}
+	return 0;
+
+}
