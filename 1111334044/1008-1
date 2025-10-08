@@ -1,0 +1,38 @@
+//10/8題目1. 寫一個程式，由鍵盤輸入3個整數，印出他們的和、平均值(有小數點)、最大值與最小值，if()裡面只能使用單一運算式或條件式。可使用if, if...else, else if敘述
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    int sum, max, min;
+    float avg;
+
+    printf("請輸入三個整數:\n");
+    scanf_s("%d %d %d", &a, &b, &c);
+
+    sum = a + b + c;
+    avg = sum / 3.0;
+
+    // 先假設最大、最小值都是 a
+    max = a;
+    min = a;
+
+    // 找最大值
+    if (b > max)
+    {max = b;}
+    else if  (c > max)
+    {max = c;}
+
+    // 找最小值
+    if (b < min)
+    {min = b; }
+    else if (c < min)
+    {min = c;}
+
+    printf("和 = %d\n", sum);
+    printf("平均 = %f\n", avg);
+    printf("最大值 = %d\n", max);
+    printf("最小值 = %d\n", min);
+
+    return 0;
+}
