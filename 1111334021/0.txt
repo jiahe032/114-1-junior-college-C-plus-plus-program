@@ -2,25 +2,34 @@
 
 int main(void)
 {
-    int chinese, english, planoutline,total;
-    float avg;
-    printf("請輸入你的國文成績:\n");
-    scanf_s("%d", &chinese); 
-    printf("請輸入你的英文成績:\n");
-    scanf_s("%d", &english);
-    printf("請輸入你的機概成績:\n");
-    scanf_s("%d", &planoutline);
-    total = chinese + english + planoutline;
-    printf("你的總成績%d+%d+%d是:%d\n", chinese,english,planoutline,total);
-    avg = total / 3.0;
-    printf("你的平均績是:%f\n", avg);
-    
-    if (avg >= 60)
-    {
-        printf("恭喜通過!");
-    }
-    else
-    {
-        printf("再加油!");
-    }
+    int a, b, c;
+    int sum;
+    double avg;
+    int max, min;
+
+    printf("請輸入三個整數:\n");
+    scanf_s("%d %d %d", &a, &b, &c);
+
+    sum = a + b + c;
+    avg = sum / 3.0;
+
+    max = a;
+    min = a;
+
+    if (b > max)
+        max = b;
+    if (c > max)
+        max = c;
+
+    if (b < min)
+        min = b;
+    if (c < min)
+        min = c;
+
+    printf("三個整數的和 = %d\n", sum);
+    printf("平均值 = %.2f\n", avg);
+    printf("最大值 = %d\n", max);
+    printf("最小值 = %d\n", min);
+
+    return 0;
 }
