@@ -1,0 +1,71 @@
+數字比較
+
+#include <stdio.h>
+
+int main(void)
+{
+	int a, b, c;
+	int Min, Max;
+	double avg;
+	int sum;
+
+	printf("請輸入三個整數:\t");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	avg = (float)(a + b + c) / 3;
+	printf("平均:%f\n", avg);
+	sum = (a + b + c);
+	printf("總和:%d\n", sum);
+	
+	Max = a;
+	Min = a;
+
+	if (b > Max)
+		Max = b;
+	if (c > Max)
+		Max = c;
+
+	printf("最大值:%d\n", Max);
+
+	if (b < Min)
+		Min = b;
+	if (c < Min)
+		Min = c;
+
+	printf("最小值:%d\n", Min);
+
+	return 0;
+}
+
+
+BMI
+
+#include <stdio.h>
+
+int main(void)
+{
+	double weight, height, BMI;
+
+	printf("請輸入您的體重(公斤):\t");
+	scanf_s("%f",&weight);
+	printf("請輸入您的身高(公尺):\t");
+	scanf_s("%f", &height);
+
+	BMI = (float)(weight) / (height * height);
+	printf("BMI:%f\n", BMI);
+
+	if (BMI < 18.5)
+		printf("體重過輕\n");
+	else if (BMI < 24)
+		printf("體重正常\n");
+	else if (BMI < 27)
+		printf("過重\n");
+	else if (BMI < 30)
+		printf("輕度肥胖\n");
+	else if (BMI < 35)
+		printf("中度肥胖\n");
+	else
+		printf("重度肥胖\n");
+
+	return 0;
+}
