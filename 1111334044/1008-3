@@ -1,0 +1,23 @@
+//10/8題目3:輸入四個整數，使用if-else、else if選擇敘述，將他們由大到小印出
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d;
+    int t;  // 暫存用於交換
+
+    printf("請輸入四個整數：");
+    scanf_s("%d %d %d %d", &a, &b, &c, &d);
+
+    // 兩兩比較交換，確保 a 是最大，d 是最小
+    if (a < b) { t = a; a = b; b = t; }
+    if (a < c) { t = a; a = c; c = t; }
+    if (a < d) { t = a; a = d; d = t; }
+    if (b < c) { t = b; b = c; c = t; }
+    if (b < d) { t = b; b = d; d = t; }
+    if (c < d) { t = c; c = d; d = t; }
+
+    printf("由大到小排列結果：%d %d %d %d\n", a, b, c, d);
+
+    return 0;
+}//1.2.3.4
