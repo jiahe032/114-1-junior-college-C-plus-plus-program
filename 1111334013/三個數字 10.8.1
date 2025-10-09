@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    int sum;
+    float avr;
+    int max, min;
+
+    printf("請輸入三個數字:");
+    scanf_s("%d %d %d", &a, &b, &c);
+
+    sum = (a + b + c);
+    printf("和為:%d\n", sum);
+    avr = sum / 3.0;
+    printf("平均值為:%.2f\n", avr);
+
+    //最大
+    if (a > b) {
+        if (a > c) {
+            printf("最大值為: %d\n", a);
+        }
+        else {
+            printf("最大值為: %d\n", c);
+        }
+    }
+    else if (b > c) {
+        printf("最大值為: %d\n", b);
+    }
+    else {
+        printf("最大值為: %d\n",c);
+    }
+
+    //最大
+    if (a < b) {
+        if (a < c) {
+            printf("最小值為: %d\n", a);
+        }
+        else {
+            printf("最小值為: %d\n", c);
+        }
+    }
+    else if (b < c) {
+        printf("最小值為: %d\n", b);
+    }
+    else {
+        printf("最小值為: %d\n", c);
+    }
+    return 0;
+
+ }

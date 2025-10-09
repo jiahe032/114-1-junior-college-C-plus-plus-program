@@ -71,13 +71,13 @@ git commit -m "你的註解"
 
 推專案上去  *(第一次加上-u，會記錄後面的資訊，第二次只需git push就好)*
 ```
-git push -u origin master
+git push -u origin main
 git push
 ```
 <br>
 
 在push時，可能會報錯誤(Updates were rejected because the remote contains work that you do not have locally.) *(第一次加上-u，會記錄後面的資訊，第二次只需git pull就好)*
 ```
-git pull -u origin master
+git pull -u origin main
 git pull
 ```

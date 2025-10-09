@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    int sum;
+    float avg;
+    int max, min;
+
+    // 輸入三個整數
+    printf("請輸入第一個整數：");
+    scanf_s("%d", &a);
+    printf("請輸入第二個整數：");
+    scanf_s("%d", &b);
+    printf("請輸入第三個整數：");
+    scanf_s("%d", &c);
+    // 計算總和與平均
+    sum = a + b + c;
+    avg = sum / 3.0;
+
+    // 計算最大值
+    max = a;
+    if (b > max)
+        max = b;
+    if (c > max)
+        max = c;
+
+    // 計算最小值
+    min = a;
+    if (b < min)
+        min = b;
+    if (c < min)
+        min = c;
+
+    // 印出結果
+    printf("總和：%d\n", sum);
+    printf("平均值：%.2f\n", avg);
+    printf("最大值：%d\n", max);
+    printf("最小值：%d\n", min);
+
+    return 0;
+}
+
+
+
+

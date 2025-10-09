@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int a, b, c, d,second,tmp1,tmp2;
+	printf("輸入第一個整數:\n");
+	scanf_s("%d",&a);
+	printf("輸入第二個整數:\n");
+	scanf_s("%d", &b);
+	printf("輸入第三個整數:\n");
+	scanf_s("%d", &c);
+	printf("輸入第四個整數:\n");
+	scanf_s("%d", &d);
+	int max = a;
+	{
+		if (b > max)
+			max = b;
+		if (c > max)
+			max = c;
+		if (d > max)
+			max = d;
+	}
+	int small = a;
+	{
+		if (b < small)
+			small = b;
+		if (c < small)
+			small = c;
+		if (d < small)
+			small = d;
+	}
+	if (max != a && small != a)
+		tmp1 = a;
+	else if (max != b && small != b)
+		tmp1 = b;
+	else if (max != c && small != c)
+		tmp1 = c;
+	else 
+		tmp1 = d;
+	if (max != a && small != a && tmp1 != a)
+		tmp2 = a;
+	else if (max != b && small != b && tmp1 != b)
+		tmp2 = b;
+	else if (max != c && small != c && tmp1 != c)
+		tmp2 = c;
+	else
+		tmp2 = d;
+	if (tmp1 > tmp2)
+		printf("由大到小:%d %d %d %d", max, tmp1, tmp2, small);
+	else
+		printf("由大到小:%d %d %d %d", max, tmp2, tmp1, small);
+	return 0;
+}
