@@ -1,0 +1,3 @@
+﻿  1015w1.cpp
+C:\Users\User\source\repos\10151\10151\1015w1.cpp(13,25): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+  10151.vcxproj -> C:\Users\User\source\repos\10151\x64\Debug\10151.exe

@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    double weight;
+    int fee;
+    while (1) {
+        printf("請輸入包裹重量 (公斤)：");
+        scanf_s("%lf", &weight);
+        if (weight <= 2)
+            fee = 60;
+        else
+            fee = 60 + (weight - 2) * 35;
+        printf("此包裹運費為：%d 元\n\n", fee);
+    }
+    return 0;
+}

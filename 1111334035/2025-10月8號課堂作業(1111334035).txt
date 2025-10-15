@@ -1,0 +1,83 @@
+第一題
+
+#include <stdio.h>
+
+int main(void)
+{
+    int a, b, c;       // 三個整數
+    int sum;           // 總和
+    double avg;        // 平均值
+    int max, min;      // 最大值 最小值
+
+    // 輸入三個整數
+    printf("請輸入三個整數(以空白分隔): ");
+    scanf_s("%d %d %d", &a, &b, &c);
+
+    // 總和 平均
+    sum = a + b + c;
+    avg = sum / 3.0;
+
+    // 假設 max and min = a
+    max = a;
+    min = a;
+
+    // 最大值
+    if (b > max)
+        max = b;
+    if (c > max)
+        max = c;
+
+    // 最小值
+    if (b < min)
+        min = b;
+    if (c < min)
+        min = c;
+
+    // 輸出
+    printf("三個數的總和是: %d\n", sum);
+    printf("平均值是: %.2f\n", avg);
+    printf("最大值是: %d\n", max);
+    printf("最小值是: %d\n", min);
+
+    return 0;
+}
+
+
+
+
+第二題
+
+#include <stdio.h>
+
+int main(void)
+{
+    double weight, height;  // 體重、身高(m)
+    double bmi;             // BMI
+
+    printf("請輸入體重(公斤): ");
+    scanf_s("%lf", &weight);
+
+    printf("請輸入身高(公尺): ");
+    scanf_s("%lf", &height);
+
+    // BMI
+    bmi = weight / (height * height);
+
+    printf("你的BMI是: %.2f\n", bmi);
+
+    // if BMI
+    if (bmi < 18.5)
+        printf("體重過輕\n");
+    else if (bmi < 25.0)
+        printf("正常體重\n");
+    else if (bmi < 30.0)
+        printf("過重\n");
+    else if (bmi < 35.0)
+        printf("輕度肥胖\n");
+    else if (bmi < 40.0)
+        printf("中度肥胖\n");
+    else
+        printf("重度肥胖(病態肥胖)\n");
+
+    return 0;
+}

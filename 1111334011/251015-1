@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    double weight;   // 包裹重量
+    double fee;      // 運費
+
+    printf("請輸入包裹重量(公斤): ");
+    scanf("%lf", &weight);
+
+    if (weight <= 2) {
+        fee = 50; // 基本2公斤以內50元
+    }
+    else {
+        fee = 50 + (weight - 2) * 30; // 超過2公斤的部分每公斤加30元
+    }
+
+    printf("包裹重量為 %.2f 公斤，運費為 %.2f 元\n", weight, fee);
+
+    return 0;
+}

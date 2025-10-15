@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i; 
+    double pi = 0.0;
+        int sign = 1;
+
+    printf("請輸入項目數n:");
+    scanf_s("%d", &n);
+
+        for (i = 1; i <= n * 2; i++) {
+            if (i % 2 == 0) {
+                continue;
+            }
+            pi = pi + sign * (4.0 / i);
+            sign = -sign;
+        }
+    printf("pi的近似值是:%.10f\n", pi);
+
+        return 0;
+}

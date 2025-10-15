@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n;               // 項目數量
+    double pi = 0.0;     // π 的近似值
+    int i;
+    int sign = 1;        // 用來控制加減號 (+1 或 -1)
+
+    printf("請輸入所需的項目數量 n: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= 2 * n; i++) { // 分母是奇數，所以跑到 2n
+        if (i % 2 == 0) continue;  // 偶數分母跳過（用 continue）
+
+        pi += sign * (4.0 / i);    // 根據正負號加減
+        sign = -sign;              // 每次改變符號
+    }
+
+    printf("使用 %d 項近似計算的 pi 值為: %.10f\n", n, pi);
+
+    return 0;
+}

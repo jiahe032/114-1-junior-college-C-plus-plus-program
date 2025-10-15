@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    float weight;
+    int cost = 0;
+
+    printf("請輸入包裹重量(公斤):\t");
+    scanf_s("%f", &weight);
+
+    if (weight <= 2) {
+        cost = 60;
+    }
+    else {
+        cost = 60 + (weight - 2) * 35;
+    }
+
+    printf("運費：%d 元\n", cost);
+
+    return 0;
+}

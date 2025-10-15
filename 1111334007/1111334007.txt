@@ -1,25 +1,23 @@
 #include<stdio.h>
-int main(void)
+int main()
 {
-	int chinese,english,count;
+	int num1, num2, num3;
+	int sum, max, min;
 	float avg = 0;
-	printf("請輸入你的國文成績:\t");
-	scanf_s("%d", &chinese);
-	printf("請輸入你的英文成績:\t");
-	scanf_s("%d", &english);
-	printf("請輸入你的計概成績:\t");
-	scanf_s("%d", &count);
-	printf("你的學期總成績%d+%d+%d是:%d\n", chinese,english,count, chinese+english+count);
-	avg = (float)(chinese + english + count) / 3;
-	printf("學期平均成績:%f\n", avg);
-
-	if (avg >= 60) 
-	{
-		printf("恭喜通過!\n");
-	}
-	else
-	{
-		printf("再加油!\n");
-	}
+	printf("請輸入第一個整數:\n");
+	scanf_s("%d", &num1);
+	printf("請輸入第二個整數:\n");
+	scanf_s("%d", &num2);
+	printf("請輸入第三個整數:\n");
+	scanf_s("%d", &num3);
+	sum = (num1 + num2 + num3);
+	avg = (float)(num1 + num2 + num3)/3;
+	max = num1;
+	if (num2 > max) max = num2;
+	if (num3 > max) max = num3;
+	min = num1;
+	if (num2 <min) min = num2;
+	if (num3 <min) min = num3;
+	printf("數字和是%d,平均是%f,最大值是%d,最小值是%d", sum, avg, max, min);
 	return 0;
 }

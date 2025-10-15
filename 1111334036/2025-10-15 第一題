@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+	int kilogram, price = 60, weight = 2;
+	printf("請輸入你的包裹重量\n");
+	scanf_s("%d", &kilogram);
+	if (kilogram < 2)
+		printf("包裹過輕");
+	while (weight < kilogram && kilogram > 2)
+	{
+		weight += 1, price += 35;
+	}
+
+	printf("你的包裹運輸費用是%d", price);
