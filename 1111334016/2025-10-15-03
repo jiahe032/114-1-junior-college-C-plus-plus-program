@@ -1,0 +1,35 @@
+題目3:請輸入一個整數表示所需的項目數量n，根據pi的近似公式pi=4-4/3+4/5-4/7+4/9-4/11+...，
+利用continue指令，計算出pi的近似值
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    double pi = 0.0;
+    int count = 0;
+
+    printf("請輸入項目數量 n：");
+    scanf_s("%d", &n);
+
+    for (int i = 1; count < n; i++) {
+        if (i % 2 == 0) {
+            continue;          // 跳過偶數分母
+        }
+
+        // 奇數分母才計算
+        double term = 4.0 / i;
+
+        if (count % 2 == 0) {
+            pi += term;        // 偶數項加
+        }
+        else {
+            pi -= term;        // 奇數項減
+        }
+
+        count++;               // 計算項目數量
+    }
+
+    printf("根據 %d 項計算，pi 的近似值為：%.10f\n", n, pi);
+
+    return 0;
+}
