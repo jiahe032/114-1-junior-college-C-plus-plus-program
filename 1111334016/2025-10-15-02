@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+	int fact = 0;//輸入一個要算出階層值的數字
+	int n = 0;
+	int i = 0;      //算出階層值
+	int h = 0;
+	int g = 1;     //算出階層值
+	double e = 1;
+	double d = 1;
+	printf_s("請輸入一個整數小於13:");
+	scanf_s("%d", &fact);
+	printf_s("請輸入項數的數量小於13:");
+	scanf_s("%d", &n);
+	while (i < fact)
+	{
+		i = i + 1;
+			g = g* i;
+	}
+	
+
+	while (h < n) 
+	{
+		h = h + 1;
+		d = d * (1 / (double)h);
+		e = e + d;
+
+	}
+		
+
+	printf_s("fact的階層值為%d\n", g);
+	printf_s("e的近似值為%f", e);
+
+return 0;
+}
