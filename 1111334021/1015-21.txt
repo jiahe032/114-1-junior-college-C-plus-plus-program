@@ -1,18 +1,25 @@
 #include <stdio.h>
 int main()
 {
-	int sum, cash;
-	sum = 0;
-	cash = 0;
-	printf("輸入包裹的重量:\n");
-	scanf_s("%d", &sum);
-	if (sum > 0)
-	{
-		sum = sum - 2;
-		cash = sum * 35 + 60;
-		printf("所需的運費為%d\n", cash);
+	int fact,n,i,j,a;
+	double e;
+	printf("輸入fact值:(<13)\n");
+	scanf_s("%d", &fact);
+		a = 1;
+			for (i = 1; i <= fact; i++) {
+				a = a * i;
+			}
+			printf("%d!=%d\n", fact, a);
+	printf("輸入n值:(<13)\n");
+	scanf_s("%d", &n);
+	e = 1.0;//第一項
+	for (i = 1; i <= n; i++) {
+		a = 1;
+		for (j = 1; j <= i ; j++) {
+			a = a * j;
+		}
+		e = e + 1.0 / a;
 	}
-	else
-		printf("輸入值錯誤\n");
+	printf("e的近似值=%1f\n", e);
 	return 0;
 }
