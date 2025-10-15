@@ -1,31 +1,22 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.36422.26
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "第五周第一題", "第五周第一題\第五周第一題.vcxproj", "{A103F30B-267D-4D12-A705-6D247800DF8A}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A103F30B-267D-4D12-A705-6D247800DF8A}.Debug|x64.ActiveCfg = Debug|x64
-		{A103F30B-267D-4D12-A705-6D247800DF8A}.Debug|x64.Build.0 = Debug|x64
-		{A103F30B-267D-4D12-A705-6D247800DF8A}.Debug|x86.ActiveCfg = Debug|Win32
-		{A103F30B-267D-4D12-A705-6D247800DF8A}.Debug|x86.Build.0 = Debug|Win32
-		{A103F30B-267D-4D12-A705-6D247800DF8A}.Release|x64.ActiveCfg = Release|x64
-		{A103F30B-267D-4D12-A705-6D247800DF8A}.Release|x64.Build.0 = Release|x64
-		{A103F30B-267D-4D12-A705-6D247800DF8A}.Release|x86.ActiveCfg = Release|Win32
-		{A103F30B-267D-4D12-A705-6D247800DF8A}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5AFAC06B-0E99-44EF-9101-924BD1A790A2}
-	EndGlobalSection
-EndGlobal
+﻿#include <stdio.h>
+
+int main()
+
+{
+    int weight;
+    int fee;
+
+    printf("請輸入你的包裹幾公斤：");
+    scanf_s("%d", &weight);
+
+    if (weight <= 2) {
+        fee = 60;
+    }
+    else {
+        fee = 60 + (weight - 2) * 35;
+    }
+
+    printf("運費為%d元\n", fee);
+
+    return 0;
+}
