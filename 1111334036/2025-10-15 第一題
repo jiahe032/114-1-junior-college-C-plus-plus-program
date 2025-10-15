@@ -11,4 +11,5 @@ int main()
 	{
 		weight += 1, price += 35;
 	}
+
 	printf("你的包裹運輸費用是%d", price);
