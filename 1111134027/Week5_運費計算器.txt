@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int weight, shippingCost;
+	printf("輸入包裝重量(kg)\n");
+	scanf_s("%d", &weight);
+	if (weight <= 2) {
+		shippingCost = 60;
+	}
+	else {
+		shippingCost = 60 + (weight - 2) * 35;
+	}
+	printf("運費為%d", shippingCost);
+	return 0;
+}
