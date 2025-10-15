@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+	int fact, n;
+	int i, j;
+	int factorial = 1;
+	double e = 1.0;
+
+	printf("請輸入一個整數 fact (<13)：");
+	scanf_s("%d", &fact);
+
+	factorial = 1;
+	for (i = 1; i <= fact; i++) {
+		factorial *= i;
+	}
+
+	printf("%d 的階乘為：%d\n", fact, factorial);
+
+	printf("請輸入要計算的項目數量 n (<13)：");
+	scanf_s("%d", &n);
+
+	i = 1;
+	e = 1.0;
+	while (i <= n) {
+		int temp = 1;
+		j = 1;
+		while (j <= i) { // 算 i!
+			temp *= j;
+			j++;
+		}
+		e += 1.0 / temp;
+		i++;
+	}
+
+	printf("e 的近似值 (取前 %d 項) = %.10f\n", n, e);
+
+	return 0;
+}
