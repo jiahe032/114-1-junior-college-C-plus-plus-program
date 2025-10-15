@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int fact, n, i;
+    int factorial = 1;
+    double e = 1.0;
+    printf("請輸入一個整數 fact < 13：");
+    scanf("%d", &fact);
+    for (i = 1; i <= fact; i++) {
+        factorial *= i;
+    }
+    printf("%d 的階乘值為：%d\n", fact, factorial);
+    printf("請輸入項目數量 n < 13：");
+    scanf("%d", &n);
+    factorial = 1;  
+    for (i = 1; i <= n; i++) {
+        factorial *= i; 
+        e += 1.0 / factorial; 
+    }
+    printf("e 的近似值為：%lf\n", e);
+    return 0;
+}

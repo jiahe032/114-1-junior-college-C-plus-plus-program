@@ -1,0 +1,156 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+    int a, b, c, d;
+    int max1, max2, max3, min;
+    printf("請輸入四個整數：");
+    scanf_s("%d %d %d %d", &a, &b, &c, &d);
+    if (a >= b && a >= c && a >= d) {
+        max1 = a;
+        if (b >= c && b >= d) {
+            max2 = b;
+            if (c >= d) {
+                max3 = c;
+                min = d;
+            }
+            else {
+                max3 = d;
+                min = c;
+            }
+        }
+        else if (c >= b && c >= d) {
+            max2 = c;
+            if (b >= d) {
+                max3 = b;
+                min = d;
+            }
+            else {
+                max3 = d;
+                min = b;
+            }
+        }
+        else {
+            max2 = d;
+            if (b >= c) {
+                max3 = b;
+                min = c;
+            }
+            else {
+                max3 = c;
+                min = b;
+            }
+        }
+    }
+    else if (b >= a && b >= c && b >= d) {
+        max1 = b;
+        if (a >= c && a >= d) {
+            max2 = a;
+            if (c >= d) {
+                max3 = c;
+                min = d;
+            }
+            else {
+                max3 = d;
+                min = c;
+            }
+        }
+        else if (c >= a && c >= d) {
+            max2 = c;
+            if (a >= d) {
+                max3 = a;
+                min = d;
+            }
+            else {
+                max3 = d;
+                min = a;
+            }
+        }
+        else {
+            max2 = d;
+            if (a >= c) {
+                max3 = a;
+                min = c;
+            }
+            else {
+                max3 = c;
+                min = a;
+            }
+        }
+    }
+    else if (c >= a && c >= b && c >= d) {
+        max1 = c;
+        if (a >= b && a >= d) {
+            max2 = a;
+            if (b >= d) {
+                max3 = b;
+                min = d;
+            }
+            else {
+                max3 = d;
+                min = b;
+            }
+        }
+        else if (b >= a && b >= d) {
+            max2 = b;
+            if (a >= d) {
+                max3 = a;
+                min = d;
+            }
+            else {
+                max3 = d;
+                min = a;
+            }
+        }
+        else {
+            max2 = d;
+            if (a >= b) {
+                max3 = a;
+                min = b;
+            }
+            else {
+                max3 = b;
+                min = a;
+            }
+        }
+    }
+    else {
+        max1 = d;
+        if (a >= b && a >= c) {
+            max2 = a;
+            if (b >= c) {
+                max3 = b;
+                min = c;
+            }
+            else {
+                max3 = c;
+                min = b;
+            }
+        }
+        else if (b >= a && b >= c) {
+            max2 = b;
+            if (a >= c) {
+                max3 = a;
+                min = c;
+            }
+            else {
+                max3 = c;
+                min = a;
+            }
+        }
+        else {
+            max2 = c;
+            if (a >= b) {
+                max3 = a;
+                min = b;
+            }
+            else {
+                max3 = b;
+                min = a;
+            }
+        }
+    }
+    printf("由大到小排列結果：%d %d %d %d\n", max1, max2, max3, min);
+
+    return 0;
+}
