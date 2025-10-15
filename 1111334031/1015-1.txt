@@ -1,0 +1,17 @@
+#include <stdio.h >
+int main(void) {
+	int package = 0;
+	int m = 0;
+	printf("輸人包裹重量 = > / n");
+	scanf_s(" %d", &package);
+	if (package <= 2) {
+		m = 60;
+	}
+	else {
+
+		m = 60 + (package - 2) * 35;
+
+	}
+	printf("包裹重量為%d公斤，需花費%d元。", package, m);
+	return 0;
+}

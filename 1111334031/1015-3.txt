@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+int main() {
+    int n;           // 使用者輸入的項目數量
+    double pi = 0.0; // 用來累加 pi 的近似值
+    int sign = 1;    // 控制加減號 (+ / -)
+
+    printf("請輸入所需的項目數量 n : ");
+    scanf_s(" % d", &n);
+
+    // 利用迴圈與 continue 計算 pi
+    for (int i = 0; i < n * 2; i++) {
+        if (i % 2 == 0) {
+            // 偶數分母（例如 0,2,4,... 代表分母 1,5,9,...）
+            pi += sign * (4.0 / (2 * i + 1));
+            sign = -sign; // 下一項符號改變
+        }
+        else {
+            continue; // 奇數項略過（模擬題目中使用 continue）
+        }
+    }
+
+    printf("pi 的近似值(取 % d 項) = % .10f\n", n, pi);
+
+    return 0;
+}

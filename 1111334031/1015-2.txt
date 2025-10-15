@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int fact, n;
+    long factorial = 1;
+    double e = 1.0; // e 起始值為 1（對應 0!）
+
+    // 輸入 fact 值
+    printf("請輸入一個整數 fact(< 13) : ");
+    scanf_s("%d", &fact);
+
+    // 計算 fact 的階乘
+    for (int i = 1; i <= fact; i++) {
+        factorial *= i;
+    }
+
+    // 輸出階乘結果
+    printf(" % d != % ld\n", fact, factorial);
+
+    // 輸入 e 的項目數量
+    printf("請輸入項目數量 n(< 13) : ");
+    scanf_s(" %d", &n);
+
+    // 根據 n 計算 e 的近似值
+    factorial = 1;
+    for (int i = 1; i <= n; i++) {
+        factorial *= i;
+        e += 1.0 / factorial;
+    }
+
+    // 輸出 e 的近似值
+    printf("e 的近似值(取 % d 項) = % .10f\n", n, e);
+
+    return 0;
+}
