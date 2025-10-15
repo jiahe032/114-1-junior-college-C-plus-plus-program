@@ -1,4 +1,78 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
-</Project>
+#include <iostream>
+using namespace std;
+
+int main() {
+    int fact, n;
+    cout << "請輸入一個整數 fact (<13)：";
+    cin >> fact;
+
+   
+    int f = 1;
+    for (int i = 1; i <= fact; i++) {
+        f *= i;
+    }
+    cout << fact << "! = " << f << endl;
+
+    cout << "請輸入項目數量 n (<13)：";
+    cin >> n;
+
+   
+    double e = 1.0; 
+    double temp = 1.0;
+    for (int i = 1; i <= n; i++) {
+        temp *= i;       
+        e += 1.0 / temp;
+    }
+
+    cout << "當 n = " << n << " 時，e 的近似值為：" << e << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
