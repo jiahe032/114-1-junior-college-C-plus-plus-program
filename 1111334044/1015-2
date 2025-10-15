@@ -1,0 +1,46 @@
+//題目2:請輸入一個整數fact<13，印出fact的階乘值，並且輸入所需的項目數量n<13，根據課本e的近似公式e=1+1/(1!)+1/(2!)+1/(3!)+...，求出e的近似值
+#include <stdio.h>
+
+int main() {
+    int fact, n;
+
+    // 輸入 fact 並計算階乘
+    printf("請輸入一個整數 fact (<13): ");
+    scanf_s("%d", &fact);
+
+    if (fact >= 13 or fact < 0) {
+        printf("輸入錯誤！fact 必須小於 13 且大於等於 0\n");
+        return 1;
+    }
+
+    // 計算 fact 的階乘 
+    int fact_result = 1;
+    for (int i = 1; i <= fact; i++) {
+        fact_result *= i;
+    }
+    printf("%d! = %d\n", fact, fact_result);
+
+    // 輸入 n 並計算 e 的近似值
+    printf("請輸入項目數量 n (<13): ");
+    scanf_s("%d", &n);
+
+    if (n >= 13 or n < 0) {
+        printf("輸入錯誤！n 必須小於 13 且大於等於 0\n");
+        return 1;
+    }
+
+    // 計算 e 的近似值
+    double e = 0.0;
+    for (int i = 0; i < n; i++) {
+        // 計算 i 的階乘 (使用 int)
+        int i_factorial = 1;
+        for (int j = 1; j <= i; j++) {
+            i_factorial *= j;
+        }
+        e += 1.0 / i_factorial;
+    }
+
+    printf("e 的近似值 (n=%d): %f\n", n, e);
+
+    return 0;
+}

@@ -1,0 +1,27 @@
+//題目1阿忠目前在經營網路購物,常常需要從海外購買大量商品,為了節省運費,都是合併包裹一起寄送,請建立可以計算海運運費的C程式,基本2公斤的物流費用是60元,每多1公斤是35元,在輸入包裹重量後,可以計算和顯示所需的運費。
+#include <stdio.h>
+
+int main() {
+    double weight;
+    int cost;
+
+    printf("請輸入包裹重量（公斤）: ");
+    scanf_s("%lf", &weight);
+
+    if (weight <= 2) 
+    {cost = 60;}
+    else {
+        // 超過2公斤的部分，每多1公斤加35元
+        // 使用進位計算，不足1公斤以1公斤計
+        int extra_kg = (int)(weight - 2);
+        if (weight - 2 > extra_kg) {
+            extra_kg++;  // 有小數部分就進位
+        }
+        cost = 60 + extra_kg * 35;
+    }
+
+    printf("包裹重量: %f 公斤\n", weight);
+    printf("所需運費: %d 元\n", cost);
+
+    return 0;
+}

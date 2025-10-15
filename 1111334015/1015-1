@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+	double weight;
+	double cost;
+
+	printf("請輸入包裹重量(kg) : ");
+	scanf_s("%1f", &weight);
+
+	if (weight <= 0) {
+		printf("重量必須大於 0\n");
+		return 0;
+	}
+	if (weight <= 2) {
+		cost = 60.0;
+	}else {
+		cost = 60.0 + (weight - 2) * 35.0;
+	}
+	printf("包裹重量:%.2f 公斤\n", weight);
+	printf("應付運費:%.2f 元\n", cost); 
+
+	return 0;
+	}

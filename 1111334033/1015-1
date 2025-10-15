@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+	int sum ,cash;
+	sum = 0;
+	cash = 0;
+	printf("輸入包裹的重量:\n");
+	scanf_s("%d", &sum);
+	if (sum > 0)
+	{
+		sum = sum - 2;
+		cash = sum * 35 + 60;
+		printf("所需的運費為%d\n", cash);
+	}
+	else
+		printf("輸入值錯誤\n");
+	return 0;
+}

@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int fact, n, i;
+    long factorial = 1;
+    double e = 1.0; // e的初始值從1開始
+
+    // 輸入fact，計算階乘
+    printf("請輸入一個整數 fact (<13): ");
+    scanf("%d", &fact);
+
+    if (fact >= 13 || fact < 0) {
+        printf("輸入錯誤，fact 必須小於 13 且大於等於 0。\n");
+        return 0;
+    }
+
+    for (i = 1; i <= fact; i++) {
+        factorial *= i;
+    }
+
+    printf("%d 的階乘為: %ld\n", fact, factorial);
+
+    // 輸入 n，計算 e 的近似值
+    printf("請輸入項目數量 n (<13): ");
+    scanf("%d", &n);
+
+    if (n >= 13 || n < 0) {
+        printf("輸入錯誤，n 必須小於 13 且大於等於 0。\n");
+        return 0;
+    }
+
+    // 重新計算階乘並累加 e
+    for (i = 1; i <= n; i++) {
+        long temp = 1;
+        for (int j = 1; j <= i; j++) {
+            temp *= j; // 計算 i!
+        }
+        e += 1.0 / temp; // 累加 1/(i!)
+    }
+
+    printf("當 n = %d 時，e 的近似值為: %.10f\n", n, e);
+
+    return 0;
+}

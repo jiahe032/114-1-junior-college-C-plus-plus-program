@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int num1, num2, num3;
+	int sum, max, min;
+	float avg = 0;
+	printf("請輸入第一個整數:\n");
+	scanf_s("%d", &num1);
+	printf("請輸入第二個整數:\n");
+	scanf_s("%d", &num2);
+	printf("請輸入第三個整數:\n");
+	scanf_s("%d", &num3);
+	printf("總和:%d+%d+%d\n", num1, num2, num3);
+	avg = (float)(num1 + num2 + num3)/3;
+	max = num1;
+	if (num2 > max)max = num2;
+	if (num3 > max)max = num3;
+	min = num1;
+	if (num2 <min)min = num2;
+	if (num3<min)min = num3;
+	printf("數字和是%d,平均是%f,最大值是%d,最小值是%d", sum, avg, max, min);
+return 0;
+}

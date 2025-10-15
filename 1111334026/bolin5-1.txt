@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(void)
+
+{
+	int a = 0;
+	int b = 0;
+	printf_s("請輸入重量:");
+	scanf_s("%d", &a);
+	if (a <= 2)
+	{
+		b = 60;
+	}
+	else
+	{
+		b = 60 + ((a - 2) * 35);
+	}
+
+	printf_s("運費:%d元", b);
+
+		return 0;
+}
