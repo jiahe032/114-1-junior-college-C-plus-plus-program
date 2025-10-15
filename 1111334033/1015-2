@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+	int fact,n,i,j,a;
+	double e;
+	printf("輸入fact值:(<13)\n");
+	scanf_s("%d", &fact);
+		a = 1;
+			for (i = 1; i <= fact; i++) {
+				a = a * i;
+			}
+			printf("%d!=%d\n", fact, a);
+	printf("輸入n值:(<13)\n");
+	scanf_s("%d", &n);
+	e = 1.0;
+	for (i = 1; i <= n; i++) {
+		a = 1;
+		for (j = 1; j <= i ; j++) {
+			a = a * j;
+		}
+		e = e + 1.0 / a;
+	}
+	printf("e的近似值=%1f\n", e);
+	return 0;
+}
