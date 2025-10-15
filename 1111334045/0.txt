@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void)
+{
+    double weight; // 包裹重量(公斤) 有小數用double
+    double fee;    // 運費(元)
+
+    printf("請輸入包裹重量(公斤): "); //顯示提示文字
+    scanf_s("%d", &weight);         //讓使用者輸入重量 &的意思是變數位置
+
+    if (weight <= 2)
+        fee = 60;                         // 基本2公斤內60元
+    else
+        fee = 60 + (weight - 2) * 35;     // 每多1公斤+35元
+
+    printf("包裹重量: %d 公斤\n", weight); //顯示重量 
+    printf("運費為: %d 元\n", fee); //顯示運費
+
+    return 0;
+}
