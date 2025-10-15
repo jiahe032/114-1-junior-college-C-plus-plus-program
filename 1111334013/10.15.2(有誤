@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int fact, n, i, j;
+    int f = 1;//階乘
+    double e = 1.0;//初始值
+
+    printf("請輸入一個整數fact(<13):");
+    scanf_s("%d", &fact);
+
+        for (i = 1; i <= fact; i++) {
+            f = f * i;
+        }
+    printf("%d 的階乘是 %d\n", fact, f);
+
+    printf("請輸入項目數n(<13):");
+    scanf_s("%d",&n);
+
+    e = 1.0;
+    for (i = 1; i <= n; i++) {
+        int f2 = 1;
+        for (j = 1; j <= i; i++) {
+            f2 = f2 * j;
+        }
+        e = e + 1.0 / f2;
+    }
+
+    printf("e的近似值是%f", e);
+
+    return 0;
+}
