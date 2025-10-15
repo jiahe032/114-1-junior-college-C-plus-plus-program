@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+	int Mg, mimi;
+	printf("請輸入重量(Mg):\n");
+	scanf_s("%d", &Mg);
+	if ((Mg >= 2)) {
+		mimi = (Mg - 2) * 35 + 60;
+		printf("你個運費為:%d\n", mimi);
+	}
+	else {
+		printf("重量不足\n");
+	}
+		return 0;
+}

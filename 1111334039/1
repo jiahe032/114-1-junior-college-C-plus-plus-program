@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+
+    int main()
+    {
+        int kg; // 單位：公斤
+        int fare = 60; // 起跳價
+
+           printf("請輸入  (單位：公斤)：");
+           scanf_s("%d", &kg);
+
+        if (kg <= 2) {
+            // 不加價，維持 80 元
+            printf("車資為：%d 元\n", fare);
+        }
+        else {
+            // 超過3公斤的部分
+        int extra_kg = kg - 2;
+
+            // 每1公斤加收 35 元
+        int units = (int)((double)extra_kg / 2);
+
+            fare += units +35;
+
+         
+
+            printf("運費為：%d 元\n", fare);
+        }
+
+        return 0;
+    }

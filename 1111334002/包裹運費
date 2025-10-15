@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	int kg, p = 60, y = 2;
+	printf("請輸入包裹重量\n");
+	scanf_s("%d", &kg);
+	while (y < kg && kg>2)
+	{
+		y += 1, p += 35;
+	}
+	printf("您的包裹重量運費為%d", p);
+		return 0;
+}
