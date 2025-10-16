@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int factorial(int n) {
+	int i, result;
+	result = 1;
+	for (i = 1; i <= n; i++) {
+		result = result * i;
+	}
+	return result;
+}
+
+int main()
+{
+	int fact,n,i;
+	double e;
+	printf("輸入fact值:(<13)\n");
+	scanf_s("%d", &fact);
+	
+	if (fact>=0 && fact < 13)
+	{
+		printf("%d!=%d\n", fact, factorial(fact));
+	}
+	else
+	{
+		printf("輸入值過大\n");
+		return 0;
+	}
+	printf("輸入n值:(<13)\n");
+	scanf_s("%d", &n);
+	e = 1.0;//第一項
+	
+	if (n>=0 && n < 13)
+	{
+		for (i = 1; i <= n; i++) {
+			e = e + 1.0 / factorial(i);
+		}
+		printf("e的近似值=%1f\n", e);
+	}
+	else
+	{
+		printf("輸入值過大\n");
+	}
+	return 0;
+}
