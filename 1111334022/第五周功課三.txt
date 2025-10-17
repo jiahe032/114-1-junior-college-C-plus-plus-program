@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+	int a, i;
+	double pi = 0.0, sign = 1.0;
+	printf("請輸入項數n：\n");
+	scanf_s("%d", &a);
+	for (i = 1; i <= a * 2; i++)
+	{
+		if (i % 2 == 0)
+			continue;
+		pi = pi + sign * (4.0 / i);
+		sign = -sign;
+	}
+	printf("pi的近似值是：%.6f\n", pi);
+}
