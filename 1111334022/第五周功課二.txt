@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main()
+{
+	int fact, f = 1, i,a;
+	printf("請輸入階乘值，請輸入小於13的數字\n");
+	scanf_s("%d", &fact);
+	if (fact > 13 || fact <= 0)
+	{
+		printf("輸入的數字大於13或小於1\n");
+		printf("請輸入階乘值，請輸入小於13的數字\n");
+		scanf_s("%d", &a);
+		for (i = 1; i <= a; i++)
+		{
+			f = f * i;
+		}
+		printf("%d階乘結果是%d\n", fact, f);
+
+	}
+	else
+	{
+    for (i = 1; i <= fact; i++)
+	{
+		f = f * i;
+	}
+	printf("%d階乘結果是%d\n", fact, f);
+
+	}
+	
+	
+	int n, fact2, i2; double e, t;
+	e = 1.0, t = 1.0;
+	printf("請輸入項目數 n，請輸入小於13的數字\n");
+	scanf_s("%d", &n);
+	if (n > 13 || n <= 0)
+	{
+		printf("輸入的數字大於13或小於1\n");
+		printf("請輸入項目數 n，請輸入小於13的數字\n");
+		scanf_s("%d", &n);
+
+		for (i2 = 1; i2 <= n; i2++)
+		{
+			t = t / i2;
+			e = e + t;
+		}
+		printf("e的近似值為：%.6f\n", e);
+	}
+	else
+	{
+		for (i2 = 1; i2 <= n; i2++)
+	{
+		t = t / i2;
+		e = e + t;
+	}
+	printf("e的近似值為：%.6f\n", e);
+	}
+	return 0;
+
+}
