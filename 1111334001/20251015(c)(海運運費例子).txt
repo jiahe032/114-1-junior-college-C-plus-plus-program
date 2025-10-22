@@ -5,7 +5,7 @@ int main()
     int s=1;
     double bag;
     printf("請輸入包裹重量(公斤):");
-    scanf("%lf",&bag);
+    scanf_s("%lf",&bag);
     
     if(bag<=2.0){
         s=50;
@@ -16,4 +16,5 @@ int main()
     printf("包裹重量為:%lf,價錢總共是:%d元",bag,s);
 
     return 0;
+
 }
