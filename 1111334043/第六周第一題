@@ -5,11 +5,11 @@ int main() {
     int year = 0;       
     
     printf("請輸入本金 p: ");
-    scanf("%lf", &p);
+    scanf_s("%lf", &p);
     printf("請輸入年利率 r (例如 0.05 代表 5%%): ");
-    scanf("%lf", &r);
+    scanf_s("%lf", &r);
     printf("請輸入存款目標 aims: ");
-    scanf("%lf", &aims);
+    scanf_s("%lf", &aims);
 
     while (p < aims) 
 {
