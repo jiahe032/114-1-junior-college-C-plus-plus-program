@@ -29,3 +29,46 @@ Global
 		SolutionGuid = {4C7EEC5E-DB9F-4B71-84A8-38A65DF9CB4A}
 	EndGlobalSection
 EndGlobal
+
+
+#include <stdio.h>
+
+float BMI(float height, float weight);
+
+int main()
+{
+    float height, weight, bmi;
+
+    printf("請輸入身高（公分）：");
+    scanf_s("%f", &height);  // 不需額外參數
+
+    printf("請輸入體重（公斤）：");
+    scanf_s("%f", &weight);  // 不需額外參數
+
+    bmi = BMI(height, weight);
+
+    printf("您的BMI為：%.2f\n", bmi);
+
+    // 根據 BMI 判斷健康狀況
+    if (bmi < 18.5)
+        printf("體重過輕\n");
+    else if (bmi < 24)
+        printf("體重正常\n");
+    else if (bmi < 27)
+        printf("體重過重\n");
+    else if (bmi < 30)
+        printf("輕度肥胖\n");
+    else if (bmi < 35)
+        printf("中度肥胖\n");
+    else
+        printf("重度肥胖\n");
+
+    return 0;
+}
+
+float BMI(float height, float weight)
+{
+    height = height / 100; // cm 轉換為 m
+    return weight / (height * height);
+}
+
